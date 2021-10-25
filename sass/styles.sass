@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap')
+
+$breakpoint-desktop: 1440px
+
+$color-rich-black: #0a0c1c
+$color-rich-lilac: #ab5cdb
+$color-white: #ffffff
+$color-yankees-blue: #1b1937
+
+$font-family-primary: 'Inter', sans-serif
+$font-family-secondary: 'Lexend Deca', sans-serif
+
+body
+  margin: 0
+  padding: 88px 24px
+  background-color: $color-rich-black
+  @media (min-width: $breakpoint-desktop)
+    padding: 177px 24px
+
+h1, h2, p
+  margin: 0
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style: none
+
+.card
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 327px
+  margin: 0 auto
+  border-radius: 8px
+  background-color: $color-yankees-blue
+  @media (min-width: $breakpoint-desktop)
+    flex-direction: row-reverse
+    max-width: 1110px
+
+.card-hero-container
+  width: 100%
+  height: 240px
+  background-color: $color-rich-lilac
+  @media (min-width: $breakpoint-desktop)
+    width: 540px
+    height: 446px
+
+.card-hero-container-inner
+  width: 100%
+  height: 100%
+  opacity: 0.75
+  background: url('../images/image-header-mobile.jpg') no-repeat center
+  background-size: cover
+  mix-blend-mode: multiply
+  @media (min-width: $breakpoint-desktop)
+    background-image: url('../images/image-header-desktop.jpg')
+
+.card-content
+  display: flex
+  flex-direction: column
+  padding: 40px 31.5px 32px
+  text-align: center
+  @media (min-width: $breakpoint-desktop)
+    flex-grow: 1
+    padding: 71px 72px 59px
+    text-align: left
+
+.card-heading
+  font: 700 28px/32px $font-family-primary
+  margin-bottom: 16px
+  color: $color-white
+  @media (min-width: $breakpoint-desktop)
+    font-size: 36px
+    line-height: 44px
+    max-width: 405px
+    margin-bottom: 25px
+
+.card-highlighted
+  color: $color-rich-lilac
+
+.card-description
+  font: 400 15px/25px $font-family-primary
+  margin-bottom: 40px
+  opacity: 0.75
+  color: $color-white
+  @media (min-width: $breakpoint-desktop)
+    flex-grow: 1
+    max-width: 375px
+
+.card-stat-list
+  display: flex
+  flex-direction: column
+  @media (min-width: $breakpoint-desktop)
+    flex-direction: row
+
+.card-stat-item + .card-stat-item
+  margin-top: 24px
+  @media (min-width: $breakpoint-desktop)
+    margin-top: 0
+    margin-left: 61.5px
+
+.card-stat-content
+  font: 700 24px/29px $font-family-primary
+  margin-bottom: 2px
+  color: $color-white
+
+.card-stat-type
+  font: 400 12px/25px $font-family-secondary
+  letter-spacing: 1px
+  text-transform: uppercase
+  opacity: 0.6
+  color: $color-white
